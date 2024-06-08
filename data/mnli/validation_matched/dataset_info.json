@@ -1,0 +1,87 @@
+{
+  "builder_name": "glue",
+  "citation": "@InProceedings{N18-1101,\n  author = \"Williams, Adina\n            and Nangia, Nikita\n            and Bowman, Samuel\",\n  title = \"A Broad-Coverage Challenge Corpus for\n           Sentence Understanding through Inference\",\n  booktitle = \"Proceedings of the 2018 Conference of\n               the North American Chapter of the\n               Association for Computational Linguistics:\n               Human Language Technologies, Volume 1 (Long\n               Papers)\",\n  year = \"2018\",\n  publisher = \"Association for Computational Linguistics\",\n  pages = \"1112--1122\",\n  location = \"New Orleans, Louisiana\",\n  url = \"http://aclweb.org/anthology/N18-1101\"\n}\n@article{bowman2015large,\n  title={A large annotated corpus for learning natural language inference},\n  author={Bowman, Samuel R and Angeli, Gabor and Potts, Christopher and Manning, Christopher D},\n  journal={arXiv preprint arXiv:1508.05326},\n  year={2015}\n}\n@inproceedings{wang2019glue,\n  title={{GLUE}: A Multi-Task Benchmark and Analysis Platform for Natural Language Understanding},\n  author={Wang, Alex and Singh, Amanpreet and Michael, Julian and Hill, Felix and Levy, Omer and Bowman, Samuel R.},\n  note={In the Proceedings of ICLR.},\n  year={2019}\n}\n",
+  "config_name": "mnli",
+  "dataset_size": 82202017,
+  "description": "GLUE, the General Language Understanding Evaluation benchmark\n(https://gluebenchmark.com/) is a collection of resources for training,\nevaluating, and analyzing natural language understanding systems.\n\n",
+  "download_checksums": {
+    "https://dl.fbaipublicfiles.com/glue/data/MNLI.zip": {
+      "num_bytes": 312783507,
+      "checksum": "e7c1d896d26ed6caf700110645df426cc2d8ebf02a5ab743d5a5c68ac1c83633"
+    }
+  },
+  "download_size": 312783507,
+  "features": {
+    "premise": {
+      "dtype": "string",
+      "id": null,
+      "_type": "Value"
+    },
+    "hypothesis": {
+      "dtype": "string",
+      "id": null,
+      "_type": "Value"
+    },
+    "label": {
+      "num_classes": 3,
+      "names": [
+        "entailment",
+        "neutral",
+        "contradiction"
+      ],
+      "id": null,
+      "_type": "ClassLabel"
+    },
+    "idx": {
+      "dtype": "int32",
+      "id": null,
+      "_type": "Value"
+    }
+  },
+  "homepage": "http://www.nyu.edu/projects/bowman/multinli/",
+  "license": "",
+  "post_processed": null,
+  "post_processing_size": null,
+  "size_in_bytes": 394985524,
+  "splits": {
+    "train": {
+      "name": "train",
+      "num_bytes": 74619646,
+      "num_examples": 392702,
+      "dataset_name": "glue"
+    },
+    "validation_matched": {
+      "name": "validation_matched",
+      "num_bytes": 1833783,
+      "num_examples": 9815,
+      "dataset_name": "glue"
+    },
+    "validation_mismatched": {
+      "name": "validation_mismatched",
+      "num_bytes": 1949231,
+      "num_examples": 9832,
+      "dataset_name": "glue"
+    },
+    "test_matched": {
+      "name": "test_matched",
+      "num_bytes": 1848654,
+      "num_examples": 9796,
+      "dataset_name": "glue"
+    },
+    "test_mismatched": {
+      "name": "test_mismatched",
+      "num_bytes": 1950703,
+      "num_examples": 9847,
+      "dataset_name": "glue"
+    }
+  },
+  "supervised_keys": null,
+  "task_templates": null,
+  "version": {
+    "version_str": "1.0.0",
+    "description": "",
+    "major": 1,
+    "minor": 0,
+    "patch": 0
+  }
+}
