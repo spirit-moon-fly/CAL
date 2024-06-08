@@ -70,7 +70,7 @@ class Inference(object):
                 raise NotImplementedError("The model is not implemented!")
 
     def process_input(self, prompt, raw_data,fs_num=None,gpt=False):
-        if self.args.dataset in ["mnli","HANS",'mnli_sampled','HANS_sampled']:
+        if self.args.dataset in ["mnli","HANS"]:
             return self._process_cls_input(prompt, raw_data,fs_num,gpt=gpt)
         elif self.args.dataset in ['bbq','unqover']:
             return self._process_bias_input(prompt, raw_data,fs_num,gpt=gpt)

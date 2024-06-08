@@ -415,15 +415,15 @@ class MNLI(Dataset):
 
 def create_dataset(dataset_name, seed=-1, model='llama2-13b-chat'):
     if "mnli" in dataset_name:
-        if dataset_name=='mnli':
-            return GLUE(seed=seed,model=model)
-        else:
+        if 'llama' not in model and 'vicuna' not in model:
             return MNLI('data/mnli_sampled/sampled.jsonl')
-    elif 'HANS' in dataset_name:
-        if dataset_name=='HANS':
-            return HANS('data/'+dataset_name+'/heuristics_evaluation_set.txt',seed,model=model)
         else:
+            return GLUE(seed=seed,model=model)
+    elif 'HANS' in dataset_name:
+        if 'llama' not in model and 'vicuna' not in model:
             return HANS('data/HANS_sampled/sampled.jsonl')
+        else:
+            return HANS('data/'+dataset_name+'/heuristics_evaluation_set.txt',seed,model=model)
     elif dataset_name in ['bbq','unqover']:
         if 'llama' not in model and 'vicuna' not in model:
             return Bias('data/'+dataset_name+'/sampled.jsonl',seed,model=model)

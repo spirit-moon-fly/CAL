@@ -25,7 +25,7 @@ def create_logger(log_path):
 def get_args():
     parser = argparse.ArgumentParser()
     parser.add_argument('--model', type=str, default='google/flan-t5-large', choices=MODEL_SET)
-    parser.add_argument('--dataset', type=str, default='mnli', choices=["mnli","HANS","bbq",'unqover','mt_bench','chatbot','mnli_sampled','HANS_sampled'])
+    parser.add_argument('--dataset', type=str, default='mnli', choices=["mnli","HANS","bbq",'unqover','mt_bench','chatbot'])
     parser.add_argument('--model_dir', type=str, default="../../model")
     parser.add_argument('--shot', type=int, default=0)
     parser.add_argument('--generate_len', type=int, default=4)

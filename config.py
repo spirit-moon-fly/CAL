@@ -4,9 +4,7 @@ MNLI_LABEL = ['entailment', 'neutral', 'contradiction']
 
 LABEL_SET = {
     'HANS': MNLI_LABEL,
-    'HANS_sampled': MNLI_LABEL,
     'mnli': MNLI_LABEL,
-    'mnli_sampled':MNLI_LABEL,
     'unqover': ['A', 'B', 'C'],
     'bbq': ['A', 'B', 'C'],
     'mt_bench':['A', 'B', 'C'],
@@ -89,8 +87,6 @@ prompt_raw={
     'bbq': BIAS_PROMPT,
     'mnli': NLI_PROMPT,
     'HANS': NLI_PROMPT,
-    'HANS_sampled': NLI_PROMPT,
-    'mnli_sampled': NLI_PROMPT,
     'mt_bench': mt_bench_prompt,
     'chatbot': mt_bench_prompt,
 }
@@ -101,7 +97,6 @@ DEBIAS_PROMPT_SET_vicuna={
     'mnli': NLI_debias_prompt_vicuna,
     'mnli_sampled': NLI_debias_prompt_vicuna,
     'HANS': NLI_debias_prompt_vicuna,
-    'HANS_sampled': NLI_debias_prompt_vicuna,
     'mt_bench': mt_bench_debias_prompt_vicuna,
     'chatbot': mt_bench_debias_prompt_vicuna,
 }
@@ -112,7 +107,6 @@ DEBIAS_PROMPT_SET_llama={
     'mnli': NLI_debias_prompt,
     'mnli_sampled': NLI_debias_prompt,
     'HANS': NLI_debias_prompt,
-    'HANS_sampled': NLI_debias_prompt,
     'mt_bench': mt_bench_debias_prompt,
     'chatbot': mt_bench_debias_prompt,
 }

@@ -31,10 +31,10 @@ python main.py --model_dir ../../model --model llama2-13b-chat --dataset mnli --
 python main.py --model_dir ../../model --model llama2-13b-chat --dataset mnli --shot 3 --generate_len 6 --fs_num 10 --seed 0
 
 # zero-shot baseline of GPT-4 on mnli datasets
-python main.py --model_dir ../../model --model gpt4 --dataset mnli_sampled --shot 0 --generate_len 20 
+python main.py --model_dir ../../model --model gpt4 --dataset mnli --shot 0 --generate_len 20 
 
 # zero-shot CAL of GPT-4 on mnli datasets
-python main.py --model_dir ../../model --model gpt4 --dataset mnli_sampled --shot 0 --generate_len 20 --debias
+python main.py --model_dir ../../model --model gpt4 --dataset mnli--shot 0 --generate_len 20 --debias
 ```
 
 If you want to reproduce our biased data identification and bias pattern induction process or find new bias patterns of LLMs, you can install the python package 'autobiasdetector' that we specifically designed for this goal. (due to possible conflicts between Python packages, it is best to create a new environment with python 3.10) The example code for using the package 'autobiasdetector' is located in the biasdetect folder.
