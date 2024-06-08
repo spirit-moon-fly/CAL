@@ -1,7 +1,7 @@
 # Causal-Guided Active Learning for Debiasing Large Language Models（accpted by ACL main conference）
 
 <p align="center">
-  <img width="1000" height="450" src="method.png">
+  <img width="800" height="350" src="method.png">
 </p>
 
 Above figure depicts the overview of the Causal-guided Active Learning framework.
