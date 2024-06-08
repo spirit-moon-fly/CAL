@@ -37,6 +37,6 @@ python main.py --model_dir ../../model --model gpt4 --dataset mnli --shot 0 --ge
 python main.py --model_dir ../../model --model gpt4 --dataset mnli --shot 0 --generate_len 20 --debias
 ```
 
-If you want to reproduce our biased data identification and bias pattern induction process or find new bias patterns of LLMs, you can install the python package 'autobiasdetector' that we specifically designed for this goal. (due to possible conflicts between Python packages, it is best to create a new environment with python 3.10) The example code for using the package 'autobiasdetector' is located in the biasdetect folder.
+If you want to reproduce our biased data identification and bias pattern induction process or find new bias patterns of LLMs, you can install the python package [autobiasdetector](https://pypi.org/project/autobiasdetector/) that we specifically designed for this goal. (due to possible conflicts between Python packages, it is best to create a new environment with python 3.10) The example code for using the package [autobiasdetector](https://pypi.org/project/autobiasdetector/) is located in the biasdetect folder.
 
 Please create an issue or contact me(https://zhouhaosun.github.io/) for any clarifications or suggestions.
