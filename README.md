@@ -8,7 +8,7 @@ Above figure depicts the overview of the Causal-guided Active Learning framework
 
 ## Dependencies
 
-- Dependencies can be installed using `requirements.txt`.
+- Dependencies can be installed using `requirements.txt` and python3.8.
 
 ## Quick start for CAL
 
