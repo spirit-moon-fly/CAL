@@ -104,8 +104,6 @@ class GLUE(Dataset):
                                                                     negas_contradiction[num2], debias_prompt)
 
         self.time += 1
-        if self.time == 10:
-            print(self.selected)
 
     def get_content_by_idx(self, idx, task, *args):
         if task == 'mnli':
@@ -216,8 +214,6 @@ class HANS(Dataset):
             self.debias_few_shot_examples = examples_llama2["mnli"].format(nega_neutral[num1], debias_prompt, debias_prompt,
                                                                     negas_contradiction[num2], debias_prompt)
         self.time+=1
-        if self.time == 10:
-            print(self.selected)
 
     def get_content_by_idx(self, idx, task=None):
         return self.data[idx]
@@ -389,11 +385,6 @@ class MT_Bench(Dataset):
             self.debias_few_shot_examples = examples_llama2["mt_bench"].format(nega_A[num1] + debias_prompt + '[[A]]\n', debias_prompt,
                                                                         nega_C[num2] + debias_prompt + '[[C]]\n')
         self.time+=1
-        if self.time==10:
-            print('******sampled*****')
-            print(self.sampled)
-            print('******selected*****')
-            print(self.selected)
 
     def get_few_shot_examples(self, task, fs_num=None):
         if fs_num is not None:

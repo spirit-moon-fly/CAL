@@ -359,7 +359,7 @@ class Inference(object):
             length = self.tokenizer(["[[" + label_space for label_space in label_spaces], padding=False, return_length=True)["length"]
             length = max(length)
             label_spaces_ids = self.tokenizer(["[[" + label_space for label_space in label_spaces], padding="max_length", max_length=length,
-                            retun_tensors="pt")["input_ids"]
+                            return_tensors="pt")["input_ids"]
             label_spaces_ids = torch.tensor(label_spaces_ids, dtype=torch.int32).to(self.device)
             label_spaces_ids = label_spaces_ids[:, 1:]
             label_spaces_ids = label_spaces_ids[:, 1:]
