@@ -56,7 +56,7 @@ class Inference(object):
                 self.tokenizer.padding_side = 'left'
                 self.pipe = LlamaForCausalLM.from_pretrained(model_dir, device_map="auto", torch_dtype=torch.float16)
 
-            elif self.model.lower()=="vicuna-13b-v1.5"
+            elif self.model.lower()=="vicuna-13b-v1.5":
 
                 from transformers import AutoModelForCausalLM, AutoTokenizer
 
