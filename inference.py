@@ -372,5 +372,46 @@ class Inference(object):
 
         return input_text, label, label_spaces_ids
 
+    def process_pred(self, pred):
+        if self.args.dataset in ["mnli", "HANS", 'mnli_sampled', 'HANS_sampled']:
+            return self._process_cls_pred(pred)
+        elif self.args.dataset in ['mt_bench', 'chatbot']:
+            return self._process_dialog_pred(pred)
+        elif self.args.dataset in ['bbq', 'unqover', 'bbq_2']:
+            return self._process_bbq_pred(pred)
+        else:
+            raise NotImplementedError("The dataset is not implemented!")
+
+    def _process_dialog_pred(self, raw_pred):
+        if '[[A]]' in raw_pred:
+            return 0
+        elif '[[B]]' in raw_pred:
+            return 1
+        elif '[[C]]' in raw_pred:
+            return 2
+        else:
+            return -1
+
+    def _process_cls_pred(self, raw_pred):
+        pred = raw_pred.lower()
+        if 'entailment' in pred:
+            return 0
+        elif 'neutral' in pred:
+            return 1
+        elif 'contradiction' in pred:
+            return 2
+        else:
+            return -1
+
+    def _process_bbq_pred(self, pred):
+        if 'A:' in pred:
+            return 0
+        elif 'B:' in pred:
+            return 1
+        elif 'C:' in pred:
+            return 2
+        else:
+            return -1
+
 
 
